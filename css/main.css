@@ -14,24 +14,34 @@ body {
     font-family: 'nanum';
     transform: rotate(0.03deg);
 }
+
 .main-container {
     background-color: blue;
     background-image: linear-gradient(#3394D5, #4013A9);
     display: flex;
     padding: 20px;
 }
+
 .main-title {
     color: white;
     width: 70%;
-    margin-left: 100px;
-    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 40px;
 }
+
 .main-img {
     width: 30%;
+    position: relative;
+}
+.main-img-iphone {
+    width:100%;
+    position: absolute;
+    bottom: -20px;
+
 }
 p {
     font-size: 15px;
- }
+}
 
 .main-button {
     background-color: #313131;
@@ -41,10 +51,20 @@ p {
     border-radius: 5px;
 }
 
+.main-button:hover {
+    background-color: black;
+}
+
+.main-button:active {
+    background-color:#3394D5;
+    color: #313131
+}
+
 .middle-container {
     text-align: center;
     margin: 100px;
 }
+
 .iconbox-container {
     background-color: #4013A9;
     color: white;
@@ -52,6 +72,7 @@ p {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
 .iconbox-wrap {
     display: flex;
     margin: auto;
@@ -62,8 +83,9 @@ p {
     width: 25%;
     text-align: center;
 }
-.iconbox i{
-    color:#4013A9;
+
+.iconbox i {
+    color: #4013A9;
     background-color: white;
     width: 100px;
     height: 100px;
@@ -73,6 +95,7 @@ p {
     box-sizing: border-box;
     margin-top: 30px;
 }
+
 .portfolio-container {
     padding: 50px;
 }
@@ -82,7 +105,8 @@ p {
     max-width: 1000px;
     margin: auto;
 }
-.portfolio-menuwrap div{
+
+.portfolio-menuwrap div {
     width: 50%;
     display: block;
     float: left;
@@ -90,35 +114,46 @@ p {
     color: white;
     padding: 40px;
 }
-.portfolio-menu1{
+
+.portfolio-menuwrap div:hover {
+    border: white solid 10px;
+    transition: all 1s;
+}
+
+.portfolio-menu1 {
     background-image: url(../img/portfolio-1.jpg);
 }
-.portfolio-menu2{
+
+.portfolio-menu2 {
     background-image: url(../img/portfolio-2.jpg);
 }
-.portfolio-menu3{
+
+.portfolio-menu3 {
     background-image: url(../img/portfolio-3.jpg);
 }
-.portfolio-menu4{
+
+.portfolio-menu4 {
     background-image: url(../img/portfolio-4.jpg);
 }
 
-.snsicon-container{
+.snsicon-container {
     text-align: center;
 }
+
 .snsicon-wrap {
     display: flex;
     margin: auto;
     width: 25%;
     max-width: 250px;
 }
+
 .snsicon {
     float: left;
     padding: 15px;
     width: 33.3%;
 }
 
-.snsicon i{
+.snsicon i {
     background-color: #3394D5;
     width: 60px;
     height: 60px;
@@ -127,4 +162,15 @@ p {
     padding-top: 13px;
     margin-top: 10px;
     box-sizing: border-box;
+}
+
+.snsicon i:hover {
+    color: white;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+    .main-container>div {
+        width: 100%;
+    }
 }
