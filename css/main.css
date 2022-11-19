@@ -15,30 +15,29 @@ body {
     transform: rotate(0.03deg);
 }
 
-.main-container {
-    background-color: blue;
+.main-background {
+
     background-image: linear-gradient(#3394D5, #4013A9);
-    display: flex;
     padding: 20px;
+    height: 550px;
+}
+.main-container {
+    margin: auto;
+    max-width: 1200px;
 }
 
 .main-title {
     color: white;
-    width: 70%;
-    margin-bottom: 100px;
-    margin-left: 40px;
+    float: left;
+    margin-top: 100px;
 }
 
 .main-img {
-    width: 30%;
-    position: relative;
+    float: right;
+    width: 400px;
+    margin-top: 95px;
 }
-.main-img-iphone {
-    width:100%;
-    position: absolute;
-    bottom: -20px;
 
-}
 p {
     font-size: 15px;
 }
@@ -170,7 +169,22 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-    .main-container>div {
-        width: 100%;
+    .main-title {
+        float: none;
+        text-align: center;
+        margin: auto;
+    }
+    .main-background {
+        position: relative;
+    }
+
+    .main-img {
+        float: none;
+        margin: auto;
+        width: 250px;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
     }
 }
